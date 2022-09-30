@@ -8,6 +8,7 @@ s=1
 for video in pt.videos:
     print("---------------------------------------------------------------")
     print(f'{s}: {video.title}')
+    s=s+1
     print("---------------------------------------------------------------")
     video.streams.filter(res="360p").first().download()
 print("Download Ending")
