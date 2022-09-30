@@ -4,11 +4,10 @@ pt=Playlist(link)
 print("---------------------------------------------------------------")
 print(f'Downloading: {pt.title}')
 print("---------------------------------------------------------------")
-s=1;
+s=1
 for video in pt.videos:
     print("---------------------------------------------------------------")
     print(f'{s}: {video.title}')
-    s=s+1;
     print("---------------------------------------------------------------")
     video.streams.filter(res="360p").first().download()
 print("Download Ending")
